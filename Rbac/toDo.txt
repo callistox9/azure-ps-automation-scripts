@@ -1,0 +1,10 @@
+[X]ImportModules
+[X]Connect account
+[X]Import data
+[X]Code block to replace the data in RoleDefId
+[X]Code block to create new Column RowNo
+[]Iterate block to loop and assign RBACs
+[]Test Code
+[]Conclude
+
+102 characters in row definition id valur to be deleted
