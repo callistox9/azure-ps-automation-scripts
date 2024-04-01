@@ -20,6 +20,7 @@ foreach ($row in $csv) {
   #$RoleDefinitionId.Substring(102); 
   try {
     # Assuming RoleDefinitionId is a string, you're trying to substring it
+    # Also, the first 102 characters are same and not accepted for as a RoleDefinitionId.
     $RoleDefinitionId.Substring(102)
   }
   catch {
