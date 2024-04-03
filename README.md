@@ -2,7 +2,7 @@
 
 A repository containing scripts for automation in PowerShell.
 
-<h3[X]Under Construction</h3>
+<h3>[X]Under Construction</h3>
 <p>The project is under progress</p>
 <ul>
 <li>Inside the directory, POWERSHELL AUTOMATION</li>
