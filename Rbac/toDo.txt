@@ -2,6 +2,7 @@
 [X]Connect account
 [X]Import data
 [X]Code block to replace the data in RoleDefId
+[X]Code block to replace Scope-subscriptionId with Destination subscriptionId in the Scope column
 [X]Code block to create new Column RowNo
 [X]102 characters in each RowDefinitionId value in each row to be deleted.
 [X]Iterate block to loop and assign RBACs
