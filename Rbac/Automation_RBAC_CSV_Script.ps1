@@ -1,5 +1,5 @@
 Import-Module Az.Resources
-Connect-AzAccount -UseDeviceAuthentication 
+Connect-AzAccount -UseDeviceAuthentication -SubscriptionId "xxxx-xxxx-xxxx"
 $csv = Import-Csv -Path ".\role-assignments-2024-03-14.csv"
 
 #Count Variable
