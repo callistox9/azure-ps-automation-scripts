@@ -11,6 +11,7 @@ $virtualNetwork = New-AzVirtualNetwork -ResourceGroupName TestRG1 -Location East
 Add-AzVirtualNetworkSubnetConfig -Name Frontend -AddressPrefix 10.1.0.0/24 -VirtualNetwork $virtualNetwork
 $virtualNetwork | Set-AzVirtualNetwork
 
+#Storing Virtul network in a variable
 
 $vnet = Get-AzVirtualNetwork -ResourceGroupName TestRG1 -Name VNet1
 Add-AzVirtualNetworkSubnetConfig -Name 'GatewaySubnet' -AddressPrefix 10.1.255.0/27 -VirtualNetwork $vnet
