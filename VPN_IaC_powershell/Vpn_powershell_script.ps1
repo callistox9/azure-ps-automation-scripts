@@ -20,3 +20,11 @@ Add-AzVirtualNetworkSubnetConfig -Name 'GatewaySubnet' -AddressPrefix 10.1.255.0
 
 # PublicIPAdress
 $gwpip = New-AzPublicIpAddress -Name "VNet1GWIP" -ResourceGroupName "TestRG1" -Location "EastUS" -AllocationMethod Static
+
+# Creating GatewayIp address configuration
+$vnet = Get-AzVirtualNetwork -Name VNet1 -ResourceGroupName TestRG1
+$subnet = Get-AzVirtualNetworkSubnetConfig -Name 'GatewaySubnet' -VirtualNetwork $vnet
+$gwipconfig = New-AzVirtualNetworkGatewayIpConfig -Name gwipconfig1 -SubnetId $subnet.Id -PublicIpAddressId $gwpip.Id
+
+# Creating VPN gateway
+New-AzVirtualNetworkGateway -Name VNet1GW -ResourceGroupName TestRG1 -Location "East US" -IpConfigurations $gwipconfig -GatewayType "Vpn" -VpnType "RouteBased" -GatewaySku VpnGw2 -VpnGatewayGeneration "Generation2"
