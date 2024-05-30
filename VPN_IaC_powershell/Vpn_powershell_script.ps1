@@ -16,4 +16,7 @@ Add-AzVirtualNetworkSubnetConfig -Name 'GatewaySubnet' -AddressPrefix 10.1.255.0
 
 $vnet = Get-AzVirtualNetwork -ResourceGroupName TestRG1 -Name VNet1
 Add-AzVirtualNetworkSubnetConfig -Name 'GatewaySubnet' -AddressPrefix 10.1.255.0/27 -VirtualNetwork $vnet | Set-AzVirtualNetwork
-#NOTE - The nate of subnet should be exactly the same as it is necessary for VPN to work
+#NOTE - The name of subnet should be exactly the same as it is necessary for VPN to work
+
+# PublicIPAdress
+$gwpip = New-AzPublicIpAddress -Name "VNet1GWIP" -ResourceGroupName "TestRG1" -Location "EastUS" -AllocationMethod Static
