@@ -28,3 +28,5 @@ $gwipconfig = New-AzVirtualNetworkGatewayIpConfig -Name gwipconfig1 -SubnetId $s
 
 # Creating VPN gateway
 New-AzVirtualNetworkGateway -Name VNet1GW -ResourceGroupName TestRG1 -Location "East US" -IpConfigurations $gwipconfig -GatewayType "Vpn" -VpnType "RouteBased" -GatewaySku VpnGw2 -VpnGatewayGeneration "Generation2"
+
+# Generally, it takes 45-50 mins to deploy this resource.
