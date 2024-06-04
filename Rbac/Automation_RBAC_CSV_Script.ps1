@@ -1,12 +1,18 @@
 Import-Module Az.Resources
 Connect-AzAccount -UseDeviceAuthentication -SubscriptionId 'xxxx-xxxx' 
 $csv = Import-Csv -Path ".\role-assignments-2024-03-14.csv"
-
+#dummy variable value. Used for testing
+$sourceSubId = "292125ed-7081-4c35-b3e0-65b69b51fd39";
+$destSubId = "1234-567we89-01wf2gg34";
 #Count Variable
 $p = 0  
-#Loop to iterate between all rows in the csv file.
+#Loop to iterate between all rows in the csv file and to replace the scope subscription id value with destination subscription id.
 foreach ($row in $csv) {
-
+  $scope = $row.Scope;
+  if ($scope -match $sourceSubId ) {
+    $newValue = $scope -replace $sourceSubId, $destSubId
+    $row.Scope = $newValue
+  }
   $p = $p + 1;
   
   #Adding a column to each row and assinging the value of $p to it.
@@ -51,7 +57,7 @@ foreach ($row in $csv) {
   }
 }
 
-# The maninulation of CSV as well as assigning RBACs could be done in a single loop,
-# But for better understanding, developers can easily read the code.
+# The maninulation of CSV as well as assigning RBACs could be done in a single loop.
+# But for better understanding,I have created separate script where developers can easily read the code.
 
 
