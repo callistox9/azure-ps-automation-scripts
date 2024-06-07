@@ -84,3 +84,7 @@ New-AzVirtualNetworkGatewayConnection -Name $gatewayConnectionName -ResourceGrou
 # Verify the Connection
 Get-AzVirtualNetworkGatewayConnection -Name $gatewayConnectionName -ResourceGroupName $ResourceGroupName
 
+<# After the cmdlet has finished, view the values. In the example below, the connection status shows as 'Connected' and you can see ingress and egress bytes.
+"connectionStatus": "Connected",
+"ingressBytesTransferred": 33509044,
+"egressBytesTransferred": 4142431 #>
