@@ -24,3 +24,13 @@ $SubnetAddressPrefix2 = "10.1.0.0/24"
 $virtualNetwork = New-AzVirtualNetwork -ResourceGroupName $ResourceGroupName -Location $Location -Name $VirtualNetworkName -AddressPrefix $AddressPrefix
 Add-AzVirtualNetworkSubnetConfig -Name $SubnetName -AddressPrefix $SubnetAddressPrefix -VirtualNetwork $virtualNetwork | Set-AzVirtualNetwork
 Add-AzVirtualNetworkSubnetConfig -Name $SubnetName2 -AddressPrefix $SubnetAddressPrefix2 -VirtualNetwork $virtualNetwork | Set-AzVirtualNetwork
+
+$LocalNetworkGatewayName = "LocalSite1"
+
+#The GatewayIPAddress is the IP address of your on-premises VPN device.
+#The AddressPrefix is your on-premises address space.
+
+$LocalNetworkGatewayAddressPrefix = "244.178.44.111/24"
+$OnPremiseAddressSpace = "244.178.44.111/24"
+
+New-AzLocalNetworkGateway -Name $LocalNetworkGatewayName -ResourceGroupName $ResourceGroupName -Location  -GatewayIpAddress $LocalNetworkGatewayAddressPrefix -AddressPrefix $OnPremiseAddressSpace 
