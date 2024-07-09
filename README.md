@@ -66,7 +66,7 @@ This Script adds a new column **RowNo** to the **CSV** for debugging and error f
 
 **_This is the main deployment script that is used for RBAC assignment_**
 Refer to this Readme.md for documentation.
-[Automation_RBAC.md](./Rbac\Automation_RBAC.md)
+[Automation_RBAC.md](./Rbac/Automation_RBAC.md)
 
 # VPN_IaC_powershell
 
@@ -74,7 +74,7 @@ This script automates the deployment of a Virtual Network Gateway in Azure. It s
 
 #### Vpn_powershell_script.ps1
 
-[Vpn_deployment](./VPN_IaC_powershell\Vpn_powershell_script.ps1)
+[Vpn_deployment](./VPN_IaC_powershell/Vpn_powershell_script.ps1)
 
 #### VPN_S2S.ps1
 
