@@ -52,7 +52,7 @@ catch {
 Write-output "Stopping the following servers:"
 Write-output $vms.Name
 stop-vms $vms
-
+#sleep for 180 seconds
 Start-Sleep -Seconds 180
 
 Write-output "Starting the following servers:"
