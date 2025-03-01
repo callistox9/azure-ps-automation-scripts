@@ -59,7 +59,7 @@ This Script replaces source subscription id with destination subscription id in 
 
 #### add_column_csv_automation_script.ps1
 
-This Script adds a new column **RowNo** to the **CSV** for debugging and error finding purposes
+This Script adds a new column **RowNo** to the **CSV** for debugging and error finding purposes.
 
 #### Automation_RBAC_CSV_Script.ps1
 
