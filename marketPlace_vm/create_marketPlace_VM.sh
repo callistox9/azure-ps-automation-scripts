@@ -1,9 +1,8 @@
 # CLI/Bash
-
 # Shows and sets subscription in which the VM is to be created.
 
 az account show
-az account set --subscription 5ac9fd75-6b88-400c-a601-d54ff61defef # This Subscription Id is some Random Value
+az account set --subscription "5ac9fvs-6cds8-40cdscsd0c-acdscds601-dcdscds54ff61def" # This Subscription Id is some Random Value
  
 # Create Markeplace VM at Desination Subscription (CLI).
 
